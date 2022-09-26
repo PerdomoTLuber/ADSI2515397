@@ -6,24 +6,24 @@ var z = Math.round(Math.random() * 100);
 console.log(x)
 console.log(y)
 console.log(z)
-if (x < y) {
-  if (y < z) {
+if (x == y) {
+  if (y != z) {
     console.log(`el número intermedio es: ${y}`)
   }
-}else if(x < z){
-  if(z < y ){
+}else if(x == z){
+  if(z != y ){
     console.log(`el número intermedio es: ${z}`)
   }
-}else if(y < x){
-  if (x < z) {
+}else if(y == x){
+  if (x != z) {
     console.log(`el número intermedio es: ${x}`)
   }
-}else if(y < z){
-  if (z < x) {
+}else if(y == z){
+  if (z != x) {
     console.log(`el número intermedio es: ${z}`)
   }
-}else if (z < x){
-  if (x < y) {
+}else if (z == x){
+  if (x != y) {
     console.log(`el número intermedio es: ${x}`)
   }
 }else {
@@ -47,7 +47,7 @@ if (x == y && x == z && y == z) {
 /*3. Pedir un número entre 0 y 9.999 y decir cuantas cifras tiene. Cuando el número 
 exceda los límites emita un mensaje y finalice el programa*/
 
-var x = Math.round(Math.random() * 9999);
+var x = Math.round(Math.random() * 10000);
 console.log(x);
 
 if (x <= 9) {
@@ -60,12 +60,13 @@ if (x <= 9) {
   console.log(`El número tiene cuatro cifra ${x}`);
 }
 
+
 /*4. Pedir una nota de 0 a 10 y mostrarla de la forma: Insuficiente, Suficiente, Bien, 
 etc. Use la escala que prefiera, pero cerciórese que tiene 5 valores*/
 
-var nota = Math.round(Math.random() * 10);
+var nota = Math.round(Math.random() * (10 - 1) + 1);
 
-if (nota > 0 && nota <= 4) {
+if (nota > 1 && nota <= 4) {
   console.log(`ES INSUFICIENTE ${nota}`);
 } else if (nota > 4 && nota <= 7) {
   console.log(`ES SUFICIENTE ${nota}`);
@@ -146,23 +147,18 @@ Si trabaja 40 horas o menos se le paga $2600 por hora
 Si trabaja más de 40 horas se le paga $2600 por cada una de las primeras 40 
 horas y $5000 por cada hora extra*/
 
-var ntrabajada=Math.round(Math.random()*40);
-var nExtras=Math.round(Math.random()*100);
-var hora=Math.round(Math.random()*100)
-total = 0;
-console.log(ntrabajada);
-console.log(nExtras);
-
-if ( hora>=40 ) {
-    nExtras-40;  
-    total = nExtras*5000 + ntrabajada*2600 ;
-    console.log(`EL SUELDO DEL TRBAJDOR ES ${total}`)
+var hora=Math.round(Math.random()*100);
+total = 0,
+extra = 0
+console.log(hora);
+if ( hora <= 40 ) {
+    total = hora * 2600 
+  console.log(`Las horas trabajas son: ${hora}\n El sueldo del trabajador es ${total}`)
   
 }else{
-  total=ntrabajada*2600;
-  console.log(`EL SUELDO DEL TRABAJADOR ES ${total}`)
+  extra= hora * 5000;
+  console.log(`Las horas trabajas son: ${hora}\n El sueldo del trabajador es ${extra}`)
 }
-
 
 /*8. Telefónica realiza los cálculos del costo de una llamada de teléfono siguiendo 
 los cálculos así:
@@ -170,6 +166,17 @@ Cuando se descuelga el teléfono los primeros 3 minutos (banderazo) cuestan
 200 pesos y cada minuto adicional cuesta 50 pesos. Escriba un programa que 
 permita calcular el costo de una llamada dados los minutos de duración.*/
 
+minu = Math.round(Math.random()* 59)
+t = 0,
+a = 0
+console.log(minu)
+if (minu <= 3){
+     t = minu * 200
+    console.log(`Los Minutos fueron: ${minu} \n El total a pagar es ${t} `)
+} else{
+     a = (t + (minu + 50))  
+    console.log(`Los Minutos fueron: ${minu} \n El total a pagar es ${a}`)
+}
 
 /*9. Solicite una fecha al usuario. en formato día, mes y año. Dígale cuanto tiempo 
 ha pasado desde esa fecha hasta hoy o cuanto falta para llegar a esa fecha si es 
@@ -180,9 +187,9 @@ posterior*/
 programa debe responder que hora será un segundo después. Ej: ingreso 
 11:59:59, el programa responde 12:00:00.*/
 
-hora=12 //Math.round(Math.random()*23);
-minutos =59 //Math.round(Math.random()*59);
-segundos=59 //Math.round(Math.random()*59);
+hora= Math.round(Math.random()*23);
+minutos = Math.round(Math.random()*59);
+segundos=Math.round(Math.random()*59);
 
 while (hora<=24) {
   while (minutos<=59) {
