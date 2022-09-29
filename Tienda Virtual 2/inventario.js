@@ -1,14 +1,15 @@
-class inventario{
+class Inventario{
     constructor (producto,cantidad){
         this._Id=producto._Id;
         this._producto=producto._Nombre
         this._cantidad=cantidad;
     }
    agregarproducto(cantidad){
-    this._cantidad+=cantidad
+    this._cantidad= cantidad + cantidad
    }
    perdidas(cantidad){
     this._cantidad+=-cantidad
    }
 }
-module.exports=inventario;
+
+module.exports=Inventario;

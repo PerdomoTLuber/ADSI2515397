@@ -1,10 +1,9 @@
 class carritoscompras {
-    listaProductos=[]
-    generarlistaproductos=0
-    constructor(Codigopedido,CodigoSerie,Fecha){
+    constructor(Codigopedido,CodigoSerie,Fecha){      
         this._Codigopedido=Codigopedido;
         this._CodigoSerie=CodigoSerie;
         this._Fecha=Fecha;
+        this._listaProductos=[]
     }
 
     set Codigopedido(Codigopedido) {

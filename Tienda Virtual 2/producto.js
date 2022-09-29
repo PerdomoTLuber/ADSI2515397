@@ -1,3 +1,4 @@
+const inventario = require("./inventario")
 class producto{
     constructor(Id,Nombre,Precio,Cantidad,Capacidad,Peso,CámaraFrontal,TripleCámara,
         Procesador,Color,Marca,Categoria,DescripciónProducto) {

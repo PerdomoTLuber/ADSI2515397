@@ -1,4 +1,4 @@
-class factura {
+class Factura {
     constructor(Nombre,Cantidad,CodigoVenta, Referencia_Producto, Precio, Iva){
         this._Nombre=Nombre;
         this._Cantidad=Cantidad;
@@ -35,4 +35,4 @@ console.log(factura1)
 console.log(factura1.ivac); 
 console.log(factura1.Recibo_compra)
 console.log(factura1.precioiva);
-module.exports = factura;
+module.exports = Factura;

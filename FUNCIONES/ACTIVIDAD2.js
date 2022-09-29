@@ -84,14 +84,6 @@ x % 2 == 0;
 //escriba una funcion que lea una cadena de texto cuantas vocales tienes cuantas consonantes .
 //cuantas que ni son vocales y consonantes
 
-
-function diferenciar(vocales, consonantes, diferentes) {
-    var texto = "hola,mundo"
-
-}
-
-
-
 const contarVocales = palabra => {
     const vocales = "aáeéiíoóuú";
     let cantidadVocales = 0;
@@ -108,7 +100,3 @@ const cadena = "Hola mundo";
 const vocales = contarVocales(cadena);
 console.log("La cadena '%s' tiene %d vocales", cadena, vocales);
 
-function contarpalabras(vocales, consonantes, otros) {
-
-
-}

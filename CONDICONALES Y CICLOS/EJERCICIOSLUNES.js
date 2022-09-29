@@ -182,6 +182,47 @@ if (minu <= 3){
 ha pasado desde esa fecha hasta hoy o cuanto falta para llegar a esa fecha si es 
 posterior*/
 
+var dia = 24
+var mes= 9
+var año = 2022
+console.log(`Dia, Mes y Año actual: = Dia ${dia}: Mes ${mes}:Año ${año}`)
+
+
+function faltantes_Dia_Mes_Año(a, b, c) {
+
+    console.log(`Dia:${a}, Mes:${b}, Año=${c}`)//La fecha que se va consultar 
+    if (c < año) {
+        y = año - c
+    } else if (c > año) {
+        y = c - año
+    }
+    if (b < mes) {
+        m = mes- b
+    } else if (b > mes) {
+        m = b - mes
+    }
+    if (a < dia) {
+        d = dia- a
+    } else if (a > dia) {
+        d = a - dia
+    }
+
+
+
+    if (d,m,y) {
+       //Lo faltante 
+        console.log(`Los dias  desde la fecha actual hasta la consultada son ${d}, los meses ${m} y los años  ${y}`)
+    }
+    
+                
+
+
+}
+faltantes_Dia_Mes_Año(Math.round(Math.random() * 31), Math.round(Math.random() * 12), Math.round(Math.random() * 10000))   
+
+
+
+faltantes_Dia_Mes_Año(Math.round(Math.random() * 31), Math.round(Math.random() * 12), Math.round(Math.random() * 10000))
 
 /*10. Solicite al usuario la hora en formato hh:mm:ss (hora militar, 24 horas). El 
 programa debe responder que hora será un segundo después. Ej: ingreso 
@@ -214,11 +255,56 @@ dos mil.*/
 /*12. Solicite la hora en formato horas, minutos y segundos. Imprima en pantalla la 
 hora que será dentro de 1 segundo*/
 
+var hora = Math.round(Math.random() * 24)
+var minutos = Math.round(Math.random() * 60)
+var segundos = Math.round(Math.random() * 60)
+console.log(`Horas: ${hora}`)
+console.log(`Minutos: ${minutos}`)
+console.log(`Segundos: ${segundos}`)
+
+var h,m,s
+if ((h < 24) && (m < 59) && (s < 59)) {
+    console.log(`hh:${h} mm: ${m} ss: ${s+1}`)
+} else if ((h < 24) && (s > 59)) {
+    console.log(`hh:${h} mm: ${m+1} ss: ${s=00}`)
+
+} else if ((h < 24) && (m > 59)) {
+    console.log(`hh:${h+1} mm: ${m=00} ss: ${s=00}`)
+
+} else { console.log('La hora no coincide') }
+
+console.log(`El tiempo es ${hora}:${minutos}:${segundos}`)
+
 
 
 
 /*13. Solicite al usuario una cantidad numérica que expresa segundos (medida de 
 tiempo). Exprésela (conviértala) en horas minutos y segundos. Según el caso*/
+
+var segundos_usuario = Math.round(Math.random() * (1 - 100000) + 100000),
+    s, m, h
+console.log(`Los segundos  por el usuario son: ${segundos_usuario}`)
+console.log('_____________________________________________')
+
+if (segundos_usuario > 3600) {
+    h = segundos_usuario / 3600
+    s= segundos_usuario % 3600
+}
+
+
+if (s > 60) {
+    
+    m = s/ 60
+    s= segundos_usuario % 60
+}
+
+
+console.log('Las horas equivalen a:', Math.round(s))
+console.log('_____________________________________________')
+console.log('Los minutos equivalen a:', Math.round(m))
+console.log('_____________________________________________')
+console.log('Los segundos equivalen a:', s)
+
 
 
 

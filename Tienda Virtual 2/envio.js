@@ -1,5 +1,5 @@
 const factura = require("./factura")
-class envio {
+class Envio {
     constructor(codigoenvio,codigofactura,direccion,telefono,tipopago){
         this._codigoenvio = codigoenvio;
         this._codigofactura = codigofactura;
@@ -16,4 +16,4 @@ class envio {
 let envio1 = new envio(123,789,'Calle 1 #23 -14', 3124567890,'PayPal')
 console.log(envio1)
 envio1.salidaproducto();
-module.exports = envio;
+module.exports = Envio;

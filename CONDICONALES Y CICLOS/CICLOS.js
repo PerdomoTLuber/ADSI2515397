@@ -14,7 +14,7 @@ for(var i=1; i<=num; i++){
         for (let i = 1; i <= num; i++) {
             var primo = num % i;
             if(primo == 0){
-                cont = cont +1
+                cont = cont + 1
             }        
         }
         if (cont==2) {
@@ -27,6 +27,27 @@ for(var i=1; i<=num; i++){
 /* Determinar si un número es o no es perfecto. Un numero es
 perfecto si la suma de sus divisores sin incluir el propio
 número es igual a este */
+
+function perfect(num){
+    let suma=0;
+    for (let i = 1; i < num; i++ ){
+        if (num%i==0){
+            suma=suma+i;
+        }
+    }
+if (suma==num) {
+    return `${num} es perfecto`;
+}
+else{
+    return `${num} No es perfecto`
+}
+}
+
+console.log(perfect(85))
+
+
+
+
 
 var num = Math.round(Math.random()*100)
 var count = 0;

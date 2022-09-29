@@ -4,11 +4,10 @@ const administrador = require("./administrador")
 const cliente = require("./cliente")
 const proveedor = require("./proveedores")
 const producto = require("./producto");
-const inventario = require('./inventario');
+const Inventario = require('./inventario');
 const carritoscompras = require('./carritocompras');
-//const inventario = require("./inventario")
-//const factura = require("./factura")
-//const envio = require("./envio")
+const Factura = require("./factura")
+const Envio = require("./envio")
 
 /*----------------------------------------------------------------------------------------------------------------*/
 
@@ -45,14 +44,12 @@ let contrato1 = new proveedor('Xiaomi',1523657,7759965,'Calle 72 #15-23','Redmi'
 let contrato2 = new proveedor('Samsung',4569874,44569823,'Calle 103 #12-205','Samsung')
 console.log(contrato1,contrato2)
 
-
-inventario1 = new inventario(celular1,4)
-inventario2 = new inventario(celular2,5)
-console.log('---------------',inventario1,'--------------------')
-
-let compra1 = new carritoscompras(cliente1)
+compra1 = new carritoscompras(4545,85698,'27/10/2020')
+console.log(compra1)
 compra1.agregarlistaproducto(celular1)
-compra1.generarlistaproductos
+compra1.generarlistaproductos();
+
+
 /*----------------------------------------------------------------------------------------------------------------------*/
 /*console.log('---------------ENVIO------------------')
 let envio1 = new envio(123,789,'Calle 1 #23 -14', 3124567890,'PayPal')
