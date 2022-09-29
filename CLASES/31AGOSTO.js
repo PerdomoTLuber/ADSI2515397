@@ -18,3 +18,4 @@ class usuario{
 let ingresar = new usuario("Juanmartinez@gmail.com",22654);
 console.log(ingresar.login());
 let registro = new usuario ("Juan Martinez", "Juanmartinez@gmail.com", 254698)
+
